@@ -1,0 +1,213 @@
+@import "colores";
+@import "mediaquery.scss";
+/*scss*/
+@mixin sizes ($width,$max-width){
+    width:$width;
+    max-width:$max-width;
+}
+@mixin sizeshm ($width,$height){
+    width:$width;
+    height:$height;
+}
+@mixin margin($margin){
+    margin:$margin;
+}
+@mixin padding($padd){
+    padding:$padd;
+}
+@mixin fontsize($fsize){
+    font-size:$fsize;
+}
+/*fonts google*/
+$font-span:'Roboto', sans-serif;
+$font-textos:'Open Sans', sans-serif;
+$font-titulos:'Delius', cursive;
+
+body{
+    background-color: $color-blanco;
+}
+/*header*/
+header{
+    background-color: $color-rosa;
+    grid-area: header;
+    color:$color-amarillo;
+    display: flex;
+    justify-content: center;
+    p{
+        font-family: $font-titulos;
+        font-weight: 800;
+        font-size: 1.2rem;
+    }
+}
+/*pie de pàgina*/
+footer{
+    grid-area: footer;
+    background: rgb(245,255,248);
+    background: linear-gradient(90deg, rgba(245,255,248,1) 14%, rgba(241,251,245,1) 16%, rgba(84,96,103,1) 100%);
+    
+    p{
+        display: flex;
+        justify-content: flex-end;
+        color: $color-blanco;
+        font-family: $font-textos;
+        font-weight: 500;
+    }
+}
+/*contenedor del cuerpo*/
+.contenedor-body{
+    width: auto;
+    max-width: 1500px;
+    grid-gap:10px;
+    padding: 10px;
+    display: grid;
+    grid-template-areas: "header header header  "
+                         "aside section section "
+                         "footer footer footer ";
+    grid-template-columns: repeat(3 ,1fr);
+    grid-template-rows: repeat(3,auto);
+}
+aside{
+    grid-area: aside;
+    ul li{
+        list-style: none;
+        @include margin(10px);
+        @include padding(10px);
+    }
+    a:link, a:visited{
+        text-decoration: none;
+        text-align: center;
+        @include fontsize(1.2rem);
+        font-family: $font-titulos;
+        font-weight: 500;
+        color: $color-gris;
+    }
+    a:hover, a:active{
+        color: $color-celeste;
+        padding: 10px 15px;
+        font-weight: 800;
+    }
+   img{
+        @include padding(0.5rem);
+   }
+ 
+   .redes-sociales{
+       @include padding(1rem);
+       p{
+           color:$color-rosa ;
+           font-size: $font-titulos;
+           @include fontsize(1.2rem);
+           font-weight: 700;
+       }
+   }
+}
+
+section{
+    grid-area: section;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    @include padding(25px);
+    
+    .text-index{
+        color: $color-rosa;
+        font-family: $font-span;
+        font-size: 1.05rem;
+        font-weight: 600;
+    }
+}
+.section-index{
+    @include padding(5px);
+    @include margin(1em);
+    padding-left: 1px;
+    margin-left: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    
+
+    img {
+        @include sizeshm(200px,200px)
+    }
+    img:hover{
+        transform: scale(1.2,1.2);
+    }
+}
+/*secciòn ferias,promociones*/
+.titulo1{
+        font-family: $font-titulos;
+        font-weight: 800;
+        font-size: 1.2rem;
+        color: $color-aqua;
+
+}
+.section-parraf{
+    font-family: $font-textos;
+    font-size: 1rem;
+    color: $color-grisoc;
+}
+.text-f1{
+    color: $color-grisoc;
+    font-family: $font-span;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+.text-f2{
+
+    a:link, a:visited{
+        text-decoration: none;
+        text-align: center;
+        font-weight: 700;
+        color: $color-aqua;
+        font-family: $font-span;
+        @include fontsize(1rem);
+    }
+}
+
+/*Formulario de contacto*/
+form{
+
+    input[type=text], select, textarea {
+        width: 100%;
+        @include padding(0.33rem);
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      
+      label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        color:$color-aqua;
+      }
+      
+      input[type=submit] {
+      
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+        background-color:$color-aqua;
+        color:$color-blanco;
+      }
+    
+    input[type=submit]:hover{
+        background-color:$color-aqua ;
+        }
+    
+    
+      .secForm{
+        float: left;
+        margin: 10%;
+        margin-top: 6px;
+      }
+      
+      .SecForm1 {
+        float: left;
+        margin: 10%;
+        margin-top: 6px;
+      }
+
+    }

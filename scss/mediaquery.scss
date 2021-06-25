@@ -1,0 +1,46 @@
+/*media queries*/
+@media only screen and (max-width:1200){
+    .contenedor-body{
+        grid-template-areas: "header header header  "
+                             "aside section section "
+                             "footer footer footer ";
+    }
+  
+
+
+}
+
+  @media only screen and (max-width:768px){
+    .contenedor-body{
+        grid-template-areas: "header header"
+                             "aside section  "
+                             "footer footer";
+
+        nav ul ,.redes-sociales{
+              display: flex;
+              justify-content: space-between;
+            }
+    }
+  
+
+
+}
+  @media only screen and (max-width:420px){
+    .contenedor-body{
+        width: auto;
+        grid-gap:5px;
+        padding: 5px;
+        grid-template-areas:"header"
+                            "aside"
+                            "section"
+                            "footer";
+                            }
+      aside ul li{
+        display: flex;
+        flex-flow: row wrap;
+
+      }
+    
+    }
+
+  
