@@ -1,0 +1,36 @@
+    body{
+        margin:0;
+        padding:0;
+        font-family:"montserrat",sans-serif;
+        min-height: 100vh;
+        background: rgb(255,218,42);
+        background: linear-gradient(90deg, rgba(255,218,42,1) 0%, rgba(207,43,78,1) 35%, rgba(103,194,203,1) 100%);
+    }
+  
+  .contenedor-body404{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color:#2b2d2e;
+    
+  }
+  .contenedor-body404 h1{
+    font-size:160px;
+    margin:0;
+    font-weight:800;
+    letter-spacing: 20px;
+  }
+  
+  .contenedor-body404 a:link, a:visited{
+          text-decoration: none;
+          text-align: center;
+          font-weight: 500;
+          color:#2b2d2e;
+      }
+
+    .contenedor-body404 h3{
+        font-weight: 700;
+        color:#2b2d2e;
+    }
